@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    background: #FFFFFF;
+}
+.heading {
+    font-size: 2.5rem;
+    position: relative;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color: #333;
+
+  }
+  .main_section{
+    padding-top: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .heading span {
+    color: #E7431C; 
+    position: relative;
+  }
+
+  .heading span::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    background-color: #e74c3c;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.4s ease-in-out;
+  }
+
+  .heading:hover span::after {
+    width: 100%;
+  }
+  .main_para{
+    color: #505050;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .main_line{
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+    color: #F2F3F7;
+}
+.data_row{
+    display: flex;
+    margin: 0 152px;
+    gap: 2rem;
+}
+.input_section {
+    background-color: #F2F3F7; 
+
+    padding: 14px;
+    /* border-radius: 8px; */
+    width: 300px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .input {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background: #F2F3F7;
+    color: #3e3838;
+    margin: 15px 0; 
+  }
+  
+  .input label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    background: #F2F3F7;
+  }
+  
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    background: #F2F3F7;
+    align-items: center;
+    
+  }
+  
+  .currency-prefix {
+    position: absolute;
+    left: 10px;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .input-wrapper input {
+    padding-left: 40px; 
+    font-size: 16px;
+    color: #000;
+    border: 1px solid #181717;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    outline: none;
+  }
+  
+  .input-wrapper input::placeholder {
+    color: #aaa;
+    font-size: 14px;
+  }
+  
+  .input-wrapper input:focus {
+    border-color: #0066cc; 
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+  }
+
+  /* show  */
+  .show_data{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 1px;
+    width: 400px;
+  }
+.show_head{
+    padding-top: 23px;
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+.show_para{
+  font-size: 15px;
+  color: #505050;
+  font-family: "Poppins", sans-serif;
+}
+.view_data{
+    margin-top: 12px;
+}
+.label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+}
+
+.data_parapraph{
+    font-size: 16px;
+color: #6c757d;
+font-family: "Inter", sans-serif;
+}
+.show_price{
+  color: #515260;
+  font-weight: 800;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+}
+.main_card{
+display: flex;
+flex-direction: column;
+gap: 2rem;
+padding: 24px 0 12px 0;
+}
+.card {
+  width: 350px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 1px 2px 2px #5570dc89;
+  padding: 20px;
+}
+.card:hover {
+  width: 350px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 3px 7px #5570dc89;
+  padding: 20px;
+}
+.profit_card {
+  width: 350px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 1px 2px 2px #4c9c4b89;
+  padding: 20px;
+}
+.profit_card:hover{
+  width: 350px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 3px 7px #4c9c4b89;
+  padding: 20px;
+}
+
+.card_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.amount {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+
+.description {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 4px 0;
+}
+
+.percentage {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.percentage.positive {
+  color: #3682c0;
+}
+
+.percentage.negative {
+  color: #38ac53;
+}
+
+.icon_circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #eaf1fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 20px;
+  color: #007bff; 
+}
+#profit{
+  font-size: 25px;
+  color: rgb(92, 198, 92);
+  background: #eaf1fc;
+}
+#revenue{
+  font-size: 25px;
+  color: rgb(54, 116, 192);
+  background: #eaf1fc;
+}

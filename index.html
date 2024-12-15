@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profit Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+<body>
+    <div>
+        <div class="main_section">
+            <h1 class="heading">Business Finance <span>Calculator</span></h1>
+            <p class="main_para">Calculator helps businesses manage and analyze their order-related finances.</p>
+     </div>
+
+     <hr class="main_line">
+     <div class="data_row">
+     <!-- input section -->
+     <div class="input_section">
+        <!-- Product Price -->
+        <div class="input">
+          <label for="productPrice">Product Price:</label>
+          <div class="input-wrapper">
+            <span class="currency-prefix">Rs.</span>
+            <input
+              type="text"
+              id="product"
+              placeholder="10,000"
+              oninput="formatInputValue(this)"
+            />
+          </div>
+        </div>
+      
+        <!-- Selling Price -->
+        <div class="input">
+          <label for="sellingPrice">Selling Price:</label>
+          <div class="input-wrapper">
+            <span class="currency-prefix">Rs.</span>
+            <input
+              type="text"
+              id="sellingPrice"
+              placeholder="16,000"
+              oninput="formatInputValue(this)"
+            />
+          </div>
+        </div>
+
+        <!-- shipping cost Per Order -->
+        <div class="input">
+            <label for="sellingPrice">Shipping Cost Per Order:</label>
+            <div class="input-wrapper">
+              <span class="currency-prefix">Rs.</span>
+              <input
+                type="text"
+                id="ShippingCost"
+                placeholder="550"
+                oninput="formatInputValue(this)"
+              />
+            </div>
+          </div>
+
+          <!-- No of trasnit  -->
+          <div class="input">
+            <label for="sellingPrice">No of Transit Orders:</label>
+            <div class="input-wrapper">
+              <span class="currency-prefix">Rs.</span>
+              <input
+                type="text"
+                id="InTranst"
+                placeholder="1,100"
+                oninput="formatInputValue(this)"
+              />
+            </div>
+        </div> 
+        
+        <!-- no of delivery order -->
+        <div class="input">
+            <label for="sellingPrice">No of Delivered Orders:</label>
+            <div class="input-wrapper">
+              <span class="currency-prefix">Rs.</span>
+              <input
+                type="text"
+                id="Delivered"
+                placeholder="1,900"
+                oninput="formatInputValue(this)"
+              />
+            </div>
+          </div>
+          
+          <!-- no of return order -->
+          <div class="input">
+            <label for="sellingPrice">No of Returned Orders:</label>
+            <div class="input-wrapper">
+              <span class="currency-prefix">Rs.</span>
+              <input
+                type="text"
+                id="Returned"
+                placeholder="78"
+                oninput="formatInputValue(this)"
+              />
+            </div>
+          </div>
+          
+          <!-- advertisment cost -->
+          <div class="input">
+            <label for="sellingPrice">Advertisement Cost:</label>
+            <div class="input-wrapper">
+              <span class="currency-prefix">Rs.</span>
+              <input
+                type="text"
+                id="TotalAdsCost"
+                placeholder="250,000"
+                oninput="formatInputValue(this)"
+              />
+            </div>
+          </div>
+  
+      </div>
+
+      <!-- show value  -->
+       <div class="show_data">
+            <h3 class="show_head">Order Summary Overview</h3>
+            <p class="show_para">The combined count of all orders processed, including delivered, returned, and in-transit.</p>
+        <!-- show total no of order? -->
+          <div class="view_data">
+            <hr class="line_showdata">
+            <div class="label">
+                <h5 class="data_parapraph">Total Number of Orders </h5>
+                <h3 class="show_price" id="totalOrder">0</h3>
+              </div>
+          </div>
+        <!-- show total shipping cost -->
+        <div class="view_data">
+            <hr class="line_showdata">
+            <div class="label">
+                <h5 class="data_parapraph">Total Shipping Cost</h5>
+                <h3 class="show_price" id="totalShippingCost">0</h3>
+              </div>
+          </div>
+           <!-- show Total Purchase Cost: -->
+        <div class="view_data">
+            <hr class="line_showdata">
+            <div class="label">
+                <h5 class="data_parapraph">Total Purchase Cost </h5>
+                <h3 class="show_price" id="TPurchaseCost">0</h3>
+              </div>
+          </div>
+          
+           <!-- show Total Investment: -->
+        <div class="view_data">
+            <hr class="line_showdata">
+            <div class="label">
+                <h5 class="data_parapraph">Total Investment: </h5>
+                <h3 class="show_price" id="totalInvestment">0</h3>
+              </div>
+          </div>
+           <!-- show Delivered Order Amount -->
+        <div class="view_data">
+            <hr class="line_showdata">
+            <div class="label">
+                <h5 class="data_parapraph">Delivered Order Amount</h5>
+                <h3 class="show_price" id="sellingDel">0</h3>
+              </div>
+          </div>
+           <!-- show Returned Order Amount -->
+        <div class="view_data">
+            <hr class="line_showdata">
+            <div class="label">
+                <h5 class="data_parapraph">Returned Order Amount
+                </h5>
+                <h3 class="show_price" id="ReturnAmt">0</h3>
+              </div>
+          </div>
+           <!-- show In-Transt Order Amount -->
+        <div class="view_data">
+            <hr class="line_showdata">
+            <div class="label">
+                <h5 class="data_parapraph">In-Transit Order Amount </h5>
+                <h3 class="show_price" id="InTranstDis">0</h3>
+              </div>
+          </div>
+          <div>
+            <hr style="margin-top: 12px;">
+          </div>
+          
+       </div>
+
+       <!-- show revenue and profilt -->
+        <div class="main_card">
+       <div class="card">
+        <div class="card_content">
+          <div>
+            <h1 class="amount" id="totalCostAmt">0</h1>
+            <p class="description">Total Revenue</p>
+            <p class="percentage positive">Summarized revenue report for sales ↑</p>
+          </div>
+          <div class="icon_circle">
+            <span class="icon"><i class="fa-solid fa-chart-column" id="revenue"></i></span>
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="profit_card">
+        <div class="card_content">
+          <div>
+            <h1 class="amount" id="profitLoss">0</h1>
+            <p class="description">Profit & Loss</p>
+            <p class="percentage negative">Our total profit and loss overview ↑</p>
+          </div>
+          <div class="icon_circle">
+            <span class="fa-solid fa-dollar-sign" id="profit"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+        </div>
+       
+      
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
