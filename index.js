@@ -31,6 +31,7 @@ let SellingDelPrice = 0;
 let InTranstAmt = 0;
 let returnAmount = 0;
 
+//function
 function formatPriceWithCommas(amount) {
     return `Rs. ${amount.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
 }
