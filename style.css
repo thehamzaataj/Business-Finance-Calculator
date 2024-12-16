@@ -266,7 +266,7 @@
     }
     .main_para{
         font-size: 12px;
-        padding:0 12px;
+        text-align: center;
     }
     .main_line {
         margin: 0 auto;
@@ -301,7 +301,7 @@
     }
     .main_para{
         font-size: 12px;
-        padding:0 12px;
+        text-align: center;
     }
     .main_line {
         margin: 0 auto;
