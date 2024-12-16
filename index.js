@@ -1,3 +1,12 @@
+// function next line when enter
+function moveToNextInput(event, nextInputId) {
+    if (event.key === "Enter" || event.keyCode === 13) {
+      event.preventDefault(); 
+      if (nextInputId) {
+        document.getElementById(nextInputId).focus();
+      }
+    }
+  }
 // Total cost calculations
 const productCostInput = document.getElementById('product');
 const advCostInput = document.getElementById('AdvCost');

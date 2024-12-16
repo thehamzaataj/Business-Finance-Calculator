@@ -11,12 +11,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 <body>
     <div>
-        <div class="main_section">
-            <h1 class="heading">Business Finance <span>Calculator</span></h1>
-            <p class="main_para">Calculator helps businesses manage and analyze their order-related finances.</p>
+      <div class="main_section">
+            <h1 class="heading">Business Finance <span class="cal">Calculator</span></h1>
+            <p class="main_para">Simplify order cost calculations and financial tracking for smarter decisions.</p>
      </div>
 
      <hr class="main_line">
@@ -33,6 +34,7 @@
               id="product"
               placeholder="10,000"
               oninput="formatInputValue(this)"
+              onkeydown="moveToNextInput(event, 'sellingPrice')"
             />
           </div>
         </div>
@@ -47,6 +49,7 @@
               id="sellingPrice"
               placeholder="16,000"
               oninput="formatInputValue(this)"
+              onkeydown="moveToNextInput(event, 'ShippingCost')"
             />
           </div>
         </div>
@@ -61,6 +64,7 @@
                 id="ShippingCost"
                 placeholder="550"
                 oninput="formatInputValue(this)"
+                onkeydown="moveToNextInput(event, 'InTranst')"
               />
             </div>
           </div>
@@ -75,6 +79,7 @@
                 id="InTranst"
                 placeholder="1,100"
                 oninput="formatInputValue(this)"
+                onkeydown="moveToNextInput(event, 'Delivered')"
               />
             </div>
         </div> 
@@ -89,6 +94,7 @@
                 id="Delivered"
                 placeholder="1,900"
                 oninput="formatInputValue(this)"
+                onkeydown="moveToNextInput(event, 'Returned')"
               />
             </div>
           </div>
@@ -103,11 +109,12 @@
                 id="Returned"
                 placeholder="78"
                 oninput="formatInputValue(this)"
-              />
+                onkeydown="moveToNextInput(event, 'TotalAdsCost')"
+                />
             </div>
           </div>
           
-          <!-- advertisment cost -->
+           <!-- advertisment cost -->
           <div class="input">
             <label for="sellingPrice">Advertisement Cost:</label>
             <div class="input-wrapper">
@@ -117,6 +124,7 @@
                 id="TotalAdsCost"
                 placeholder="250,000"
                 oninput="formatInputValue(this)"
+                onkeydown="moveToNextInput(event, null)"
               />
             </div>
           </div>
