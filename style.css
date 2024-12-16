@@ -264,6 +264,14 @@
         flex-direction: column;
         align-items: center;
     }
+    .main_para{
+        font-size: 12px;
+        padding:0 12px;
+    }
+    .main_line {
+        margin: 0 auto;
+        color: #F2F3F7;
+    }
     .main_section{
         max-width: 500px;
         padding: 15px ;
@@ -289,9 +297,16 @@
 
 @media (max-width: 480px) {
     .heading {
-        font-size: 1.8rem; 
+        font-size: 1.4rem; 
     }
-
+    .main_para{
+        font-size: 12px;
+        padding:0 12px;
+    }
+    .main_line {
+        margin: 0 auto;
+        color: #F2F3F7;
+    }
     .amount {
         font-size: 20px; 
     }
